@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="row" style="margin-top: 100px;">
+    
+    <form class="col s12" action="" method="POST" >
+    {% csrf_token %}
+    <h1>Add Company</h1>
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Name of shop , hotel, restaurant etc." name="name" type="text" class="validate">
+          <label for="Name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="contact" type="text" placeholder="Only ten digits (9911776655)" class="validate" name="contact">
+          <label for="contact">Contact</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Shop Number" type="text" class="validate" name="ad1">
+          <label for="Address">Address Line 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Locality" type="text" class="validate" name="ad2">
+          <label for="Address">Address Line 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Example - Varanasi" type="text" class="validate" name="city">
+          <label for="City">City</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">          
+            <input placeholder="Add more than one property about your store, such as clothing , bakery , hardware , stationery. " type="text" class="validate" name="properties">
+            <label for="properties">Properties</label>         
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="submit" style="margin-left: 550px;">Submit
+      	<i class="material-icons right">send</i>
+      </button>        
+    </form>
+   
+</div>				
+{% endblock %}

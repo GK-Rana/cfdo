@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>	
+	<title>Project</title>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+      <!--Import materialize.css-->
+      
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+
+
+<nav style="background-color: #00897b;">
+    <div class="nav-wrapper">
+    <a href="/members/home/" class="brang-logo" style="font-size: 40px;">Genie</a>
+      
+      <form method="GET" action="/members/search/">
+        <div class="input-field">
+          <input id="search" type="search" placeholder="Search any Shop or Mall." name="search"  style="background-color: #e3f2fd; color: black;" required>
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>  
+       <div class="row" style="text-align: center;">
+        <a class="waves-effect waves-light btn-large"  href="/members/joinus/"><i class="material-icons left">add</i>joinus</a>
+        <a class="waves-effect waves-light btn-large" href="/members/home/"><i class="material-icons left">home</i>Home</a>
+      </div>  
+    </div>
+
+ </nav>
+
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+
+</body>
+</html>
